@@ -26,6 +26,7 @@ from altimeter.aws.resource.ec2.vpc import VPCResourceSpec
 from altimeter.aws.resource.ec2.vpc_endpoint import VpcEndpointResourceSpec
 from altimeter.aws.resource.ec2.vpc_endpoint_service import VpcEndpointServiceResourceSpec
 from altimeter.aws.resource.ec2.vpc_peering_connection import VPCPeeringConnectionResourceSpec
+from altimeter.aws.resource.ec2.elastic_ip import ElasticIPResourceSpec
 from altimeter.aws.resource.elbv1.load_balancer import ClassicLoadBalancerResourceSpec
 from altimeter.aws.resource.elbv2.load_balancer import LoadBalancerResourceSpec
 from altimeter.aws.resource.elbv2.target_group import TargetGroupResourceSpec
@@ -95,6 +96,7 @@ DEFAULT_RESOURCE_SPEC_CLASSES: Tuple[Type[AWSResourceSpec], ...] = (
     VPCResourceSpec,
     VpcEndpointResourceSpec,
     VpcEndpointServiceResourceSpec,
+    ElasticIPResourceSpec,
 )
 
 INFRA_RESOURCE_SPEC_CLASSES: Tuple[Type[AWSResourceSpec], ...] = (
